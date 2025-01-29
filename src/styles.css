@@ -1,0 +1,13 @@
+:root {
+  --preto: #000000;
+  --verde: #56F000;
+  --branco: #FFFFFF;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

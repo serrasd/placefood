@@ -1,0 +1,49 @@
+form {
+  display: flex;
+  gap: 0px;
+}
+
+input {
+  width: 60vw;
+  padding: 1%;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+  outline: none;
+}
+
+input:focus {
+  border-color: gray;
+}
+
+.buscar {
+  color: var(--preto) !important;
+  background-color: lightgray;
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 1px;
+  border: 1px solid transparent;
+  margin-right: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease;
+}
+
+.buscar:hover {
+  border-color: var(--verde);
+}
+
+.botoes-conta {
+  display: flex;
+  gap: 20px;
+}
+
+.cria-conta, .logar {
+  color: var(--preto) !important;
+  border: none;
+  cursor: pointer;
+}
+
+.cria-conta:hover, .logar:hover {
+  text-decoration: underline;
+}

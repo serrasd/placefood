@@ -1,7 +1,10 @@
 :root {
   --preto: #000000;
-  --verde: #56F000;
+  --verde-claro: #82e182;
+  --verde: #76c76d;
   --branco: #FFFFFF;
+  --cinza-claro: #d3d3d3;
+  --verde-logo: #11D220;
 }
 
 html, body {

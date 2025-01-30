@@ -5,9 +5,9 @@ form {
 
 input {
   width: 60vw;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-color: transparent;
-  outline: none;
+  border-radius: 5px 0px 0px 5px;
+  border-color: var(--verde-logo);
+  outline: transparent;
 }
 
 input::placeholder {
@@ -15,12 +15,11 @@ input::placeholder {
 }
 
 input:focus {
-  border-color: gray;
+  border-color: var(--verde-claro);
 }
 
 .buscar {
-  color: var(--preto) !important;
-  background-color: lightgray;
+  background-color: var(--verde-claro);
   height: 45px;
   padding: 10px 20px;
   border-radius: 1px;
@@ -29,6 +28,7 @@ input:focus {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: border 0.3s ease;
+  border-radius: 0px 5px 5px 0px;
 }
 
 .buscar:hover {
@@ -40,12 +40,54 @@ input:focus {
   gap: 20px;
 }
 
-.cria-conta, .logar {
+.cria-conta,
+.logar {
   color: var(--preto) !important;
   border: none;
   cursor: pointer;
 }
 
-.cria-conta:hover, .logar:hover {
+.cria-conta:hover,
+.logar:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+
+  input {
+    width: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  img {
+    width: 100px !important;
+  }
+
+  input {
+    width: 150px;
+  }
+
+  .buscar {
+    width: 2px;
+  }
+
+  .botoes-conta {
+    display: flex;
+  }
+
+  .botoes-conta .cria-conta, .botoes-conta .logar {
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }

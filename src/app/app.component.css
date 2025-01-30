@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +6,6 @@
 }
 
 .cabecalho {
-  background-color: lightgreen;
-}
-
-main {
   display: flex;
   align-items: center;
 }
@@ -31,4 +28,13 @@ header {
 
 mat-toolbar {
   background-color: transparent;
+}
+
+@media (max-width: 480px) {
+  header img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
 }

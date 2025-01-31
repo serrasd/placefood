@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -9,4 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './card-produtos.component.html',
   styleUrl: './card-produtos.component.css'
 })
-export class CardProdutosComponent { }
+export class CardProdutosComponent {
+  @Input() nome!: string;
+  @Input() imagem!: string;
+  @Input() preco!: Number;
+}

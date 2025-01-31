@@ -1,5 +1,11 @@
-<app-container>
-  <h1>Produtos sugeridos</h1>
-  <app-card-produtos></app-card-produtos>
-  <app-card-produtos></app-card-produtos>
-</app-container>
+<h1>Produtos sugeridos</h1>
+
+<div class="container-cards">
+  <app-card-produtos
+    *ngFor="let produto of produtos"
+    [nome]="produto.nome"
+    [imagem]="produto.imagem"
+    [preco]="produto.preco">
+  </app-card-produtos>
+</div>
+

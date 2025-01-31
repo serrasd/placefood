@@ -1,11 +1,32 @@
-<h1>Produtos sugeridos</h1>
-
-<div class="container-cards">
+<h1 class="titulo-sugeridos">Produtos sugeridos</h1>
+<div class="sugerido-cards">
   <app-card-produtos
     *ngFor="let produto of produtos"
     [nome]="produto.nome"
     [imagem]="produto.imagem"
-    [preco]="produto.preco">
+    [preco]="produto.preco"
+  >
   </app-card-produtos>
 </div>
 
+<h1 class="titulo-destaques">Destaques do dia</h1>
+<div class="destaques-cards">
+  <app-card-produtos
+    *ngFor="let destaque of destaques"
+    [nome]="destaque.nome"
+    [imagem]="destaque.imagem"
+    [preco]="destaque.preco"
+  >
+  </app-card-produtos>
+</div>
+
+<h1 class="titulo-hortifruti">Hortifruti</h1>
+<div class="hortifruti-cards">
+  <app-card-produtos
+    *ngFor="let hortifruti of hortifruti"
+    [nome]="hortifruti.nome"
+    [imagem]="hortifruti.imagem"
+    [preco]="hortifruti.preco"
+  >
+  </app-card-produtos>
+</div>

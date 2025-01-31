@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  transition: transform 0.3s;
 }
 
 .card-busca img {
@@ -20,6 +21,7 @@
 }
 
 .card-busca:hover {
+  transform: scale(1.02);
   outline: 1px solid var(--verde);
 }
 
@@ -72,4 +74,9 @@
   margin-top: 30px;
   width: 100%;
   padding: 10px;
+}
+
+button {
+  background-color: var(--verde);
+  color: var(--preto) !important;
 }

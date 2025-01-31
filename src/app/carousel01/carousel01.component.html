@@ -1,14 +1,10 @@
 @defer {
-  <c-carousel (itemChange)="onItemChange($event)" [interval]="2500" transition="slide">
-    <c-carousel-inner>
-      <c-carousel-item *ngFor="let slide of slides">
-        <img
-          [src]="slide.src"
-          alt="{{slide.title}}"
-          class="d-block"
-          loading="lazy"
-        />
-      </c-carousel-item>
-    </c-carousel-inner>
-  </c-carousel>
+  <nz-carousel nzAutoPlay>
+    @for (index of array; track index) {
+      <div nz-carousel-content>
+        <img [src]="index" alt="">
+      </div>
+    }
+  </nz-carousel>
+
 }

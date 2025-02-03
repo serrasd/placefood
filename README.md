@@ -1,59 +1,48 @@
 # PlacefoodDeveloper
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+Este projeto foi gerado usando [Angular CLI](https://github.com/angular/angular-cli) versão 19.1.4.
 
-## Development server
+## Como Executar
 
-To start a local development server, run:
+1. Certifique-se de ter o Node.js instalado em sua máquina.
+2. Abra o terminal e navegue até o diretório raiz do projeto.
+3. Execute o seguinte comando para instalar as dependências do projeto:
+
+    ```
+    npm install
+    ```
+
+## Servidor de desenvolvimento
+
+Para iniciar um servidor de desenvolvimento local, execute no terminal dentro da pasta do projeto:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois que o servidor estiver em execução, abra seu navegador e navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente sempre que você modificar qualquer um dos arquivos de origem.
 
-## Code scaffolding
+<h1 align="center"> Placefood </h1>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+<p align="center">
+O Placefood é um e-commerce de alimentos onde você pode selecionar os melhores produtos e recebê-los em sua casa
+</p>
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+<br>
 
-```bash
-ng generate --help
-```
+<!-- Adicionar imagem posteriormente -->
+<!-- <p align="center">
+  <img alt="" src="" width="100%">
+</p> -->
 
-## Building
+## 🖥️ Tecnologias
 
-To build the project run:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- HTML e CSS
+- TypeScript
+- Angular
+- MySQL
+- Mongo
+- Git e Github

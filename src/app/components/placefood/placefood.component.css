@@ -14,8 +14,8 @@ form {
 input {
   width: 60vw;
   border-radius: 5px 0px 0px 5px;
-  border-color: var(--verde-logo);
-  outline: transparent;
+  border: 2px solid var(--verde-logo);
+  border-right: none;
 }
 
 input::placeholder {
@@ -23,7 +23,7 @@ input::placeholder {
 }
 
 input:focus {
-  border-color: var(--verde-claro);
+  border: 1px solid var(--verde-claro);
 }
 
 .buscar {
@@ -31,7 +31,6 @@ input:focus {
   height: 45px;
   padding: 10px 20px;
   border-radius: 1px;
-  border: 1px solid transparent;
   margin-right: 20px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -61,21 +60,18 @@ input:focus {
 }
 
 @media (max-width: 480px) {
-
   input {
     width: 50px;
   }
 }
 
 @media (max-width: 600px) {
-
   input {
     width: 300px;
   }
 }
 
 @media (max-width: 768px) {
-
   img {
     width: 100px !important;
   }
@@ -92,7 +88,8 @@ input:focus {
     display: flex;
   }
 
-  .botoes-conta .cria-conta, .botoes-conta .logar {
+  .botoes-conta .cria-conta,
+  .botoes-conta .logar {
     font-size: 0.8rem;
     border: none;
     cursor: pointer;

@@ -4,7 +4,7 @@
   --verde: #76c76d;
   --branco: #FFFFFF;
   --cinza-claro: #d3d3d3;
-  --verde-logo: #11D220;
+  --verde-logo: rgb(17, 210, 32);
 }
 
 html, body {

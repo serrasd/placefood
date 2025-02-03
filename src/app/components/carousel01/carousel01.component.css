@@ -1,7 +1,12 @@
+nz-carousel {
+  height: 270px !important;
+}
+
 [nz-carousel-content] {
   margin: auto;
   width: 1440px;
   height: 150px;
+  padding-top: 110px;
 }
 
 img {

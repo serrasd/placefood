@@ -2,6 +2,11 @@ nav {
   background-color: var(--verde-claro);
   height: 40px;
   padding-top: 10px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 ul {

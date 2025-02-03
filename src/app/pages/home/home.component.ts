@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContainerComponent } from '../../container/container.component';
-import { CardProdutosComponent } from '../../card-produtos/card-produtos.component';
+import { ContainerComponent } from '../../components/container/container.component';
+import { CardProdutosComponent } from '../../components/card-produtos/card-produtos.component';
 
 @Component({
   selector: 'app-home',

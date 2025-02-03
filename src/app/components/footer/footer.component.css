@@ -1,0 +1,8 @@
+.banner-footer {
+  width: 100%;
+}
+
+.rodape {
+  height: 10%;
+  background-color: var(--verde);
+}

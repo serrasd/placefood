@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContainerComponent } from '../../components/container/container.component';
 import { CardProdutosComponent } from '../../components/card-produtos/card-produtos.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ContainerComponent, CardProdutosComponent, CommonModule],
+  imports: [CardProdutosComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -8,7 +8,7 @@ import { PlacefoodComponent } from './components/placefood/placefood.component';
 import { NavComponent } from './components/nav/nav.component';
 import { NzDemoCarouselAutoplayComponent } from './components/carousel01/carousel01.component';
 import { ContainerComponent } from './components/container/container.component';
-import { CardProdutosComponent } from './components/card-produtos/card-produtos.component';
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -21,9 +21,9 @@ import { CardProdutosComponent } from './components/card-produtos/card-produtos.
     PlacefoodComponent,
     NavComponent,
     ContainerComponent,
-    CardProdutosComponent,
     NzDemoCarouselAutoplayComponent,
-  ],
+    FooterComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

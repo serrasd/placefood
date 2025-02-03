@@ -21,10 +21,10 @@
 }
 
 .logo-placefood {
-  width: 80%;
-  height: 14rem;
+  width: 250px;
+  height: 50px;
   object-fit: cover;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .example-spacer {

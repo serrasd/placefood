@@ -29,3 +29,20 @@ ul {
     font-size: 0.9rem;
   }
 }
+
+select {
+  width: auto;
+  font-weight: 600;
+  background: none;
+  border: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+select option {
+  background-color: var(--branco);
+  color: var(--preto);
+  padding: 10px;
+}

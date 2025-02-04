@@ -11,23 +11,11 @@ nav {
 
 ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   justify-content: space-around;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  li {
-    font-size: 0.9rem;
-  }
 }
 
 select {
@@ -45,4 +33,19 @@ select option {
   background-color: var(--branco);
   color: var(--preto);
   padding: 10px;
+}
+
+/* MEDIAQUERIES */
+
+@media (max-width: 480px) {
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 0.8em;
+    justify-content: space-evenly;
+  }
+
+  select {
+    width: 20vw;
+  }
 }

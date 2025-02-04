@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [MatCardModule, MatButtonModule],
   templateUrl: './card-produtos.component.html',
-  styleUrl: './card-produtos.component.css'
+  styleUrl: './card-produtos.component.css',
 })
 export class CardProdutosComponent {
   @Input() nome!: string;

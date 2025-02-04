@@ -20,3 +20,24 @@ img {
 .ant-carousel {
   height: 200px;
 }
+
+/* MEDIAQUERIES */
+
+@media (max-width: 480px) {
+  nz-carousel {
+    height: 180px !important;
+  }
+
+  [nz-carousel-content] {
+    margin: 0;
+    width: 500px;
+    height: auto;
+    padding-top: 110px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 50px;
+  }
+}

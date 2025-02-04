@@ -1,3 +1,34 @@
+.cabecalho {
+  background-color: var(--branco);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+}
+
+.header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-placefood {
+  width: 250px;
+  height: 50px;
+  object-fit: cover;
+  padding-top: 10px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: transparent;
+}
+
 section {
   background-color: var(--branco);
   width: 100%;
@@ -56,56 +87,39 @@ input:focus {
   text-decoration: underline;
 }
 
+/* MEDIAQUERIES */
+
 @media (max-width: 480px) {
-
-  section {
-    width: 95%;
-    display: flex;
-    justify-content: center;
+  .cabecalho {
+    background-color: var(--verde-claro);
   }
 
-  form {
-    width: 95%;
+  .logo-placefood {
+    display: none;
   }
 
-  input {
-    width: 95%;
+  .buscar {
+    background-color: var(--verde);
   }
 
   .botoes-conta {
     display: none;
   }
-}
 
-
-/* @media (max-width: 600px) {
-  input {
-    width: 300px;
-  }
-} */
-
-/* @media (max-width: 768px) {
-  img {
-    width: 100px !important;
-  }
-
-  input {
-    width: 150px;
-  }
-
-  .buscar {
-    width: 2px;
-  }
-
-  .botoes-conta {
+  section {
+    background-color: var(--verde-claro);
+    width: 100%;
     display: flex;
+    justify-content: center;
   }
 
-  .botoes-conta .cria-conta,
-  .botoes-conta .logar {
-    font-size: 0.8rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+  form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
-} */
+
+  input {
+    width: 60vw;
+  }
+}

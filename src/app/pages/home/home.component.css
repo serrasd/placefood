@@ -18,10 +18,22 @@
   justify-content: center;
 }
 
-.titulo-destaques {
-  margin-top: 30px;
-}
+/* MEDIAQUERIES */
 
-.titulo-hortifruti {
-  margin-top: 30px;
+@media (max-width: 480px) {
+  .sugerido-cards,
+  .destaques-cards,
+  .hortifruti-cards {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+  }
+
+  .titulo-sugeridos,
+  .titulo-destaques,
+  .titulo-hortifruti {
+    margin-left: 20px;
+    font-weight: 600;
+  }
 }

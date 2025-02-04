@@ -67,7 +67,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-bottom: 16px;
 }
 
 .card-busca button {
@@ -79,4 +78,40 @@
 button {
   background-color: var(--verde);
   color: var(--preto) !important;
+}
+
+/* MEDIAQUERIES */
+
+@media (max-width: 480px) {
+  .card-busca {
+    width: 95%;
+    height: 80%;
+    margin: 0;
+  }
+
+  .card-busca img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  .card-busca h2 {
+    padding-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .card-busca ul li {
+    font-size: 1rem;
+  }
+
+  .card-busca button {
+    font-size: 0.9rem;
+  }
+
+  .card-busca mat-card-actions {
+    width: 100%;
+  }
 }

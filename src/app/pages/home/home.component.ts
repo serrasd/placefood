@@ -12,7 +12,7 @@ import { CardProdutosComponent } from '../../components/card-produtos/card-produ
 export class HomeComponent {
   produtos = [
     {
-      nome: 'Filé de Frango Peito Congelado sem Osso Sadia 1Kg',
+      nome: 'Filé de Frango Peito Sadia 1Kg',
       imagem: 'assets/file-de-frango.png',
       preco: 23.49,
     },
@@ -27,7 +27,7 @@ export class HomeComponent {
       preco: 18.47,
     },
     {
-      nome: 'Pão de alho Santa Massa Tradicional 400g',
+      nome: 'Pão de alho Santa Massa Tradicional',
       imagem: 'assets/pao-de-alho.png',
       preco: 16.82,
     },
@@ -44,7 +44,7 @@ export class HomeComponent {
       preco: 2.59,
     },
     {
-      nome: 'Café em Pó 3 Corações Tradicional 500g',
+      nome: 'Café em Pó 3 Corações Tradicional',
       imagem: 'assets/cafe-em-po-3-coracoes-tradicional.png',
       preco: 28.99,
     },

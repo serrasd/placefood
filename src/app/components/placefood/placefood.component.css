@@ -12,14 +12,11 @@ form {
 }
 
 input {
+  padding: 0 1em;
   width: 60vw;
   border-radius: 5px 0px 0px 5px;
   border: 2px solid var(--verde-logo);
   border-right: none;
-}
-
-input::placeholder {
-  padding-left: 10px;
 }
 
 input:focus {

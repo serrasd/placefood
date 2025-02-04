@@ -36,10 +36,7 @@ mat-toolbar {
 }
 
 @media (max-width: 480px) {
-  header img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
+  .logo-placefood {
+    display: none;
   }
 }

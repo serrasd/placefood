@@ -57,18 +57,34 @@ input:focus {
 }
 
 @media (max-width: 480px) {
+
+  section {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    width: 95%;
+  }
+
   input {
-    width: 50px;
+    width: 95%;
+  }
+
+  .botoes-conta {
+    display: none;
   }
 }
 
-@media (max-width: 600px) {
+
+/* @media (max-width: 600px) {
   input {
     width: 300px;
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   img {
     width: 100px !important;
   }
@@ -92,4 +108,4 @@ input:focus {
     cursor: pointer;
     border-radius: 5px;
   }
-}
+} */

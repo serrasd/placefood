@@ -41,3 +41,34 @@ img {
     height: 50px;
   }
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  [nz-carousel-content] {
+    margin: 0;
+    width: 500px;
+    height: auto;
+    padding-top: 110px;
+  }
+
+  nz-carousel {
+    height: 210px !important;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  nz-carousel {
+    height: 250px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  nz-carousel {
+    height: 300px !important;
+  }
+}
+
+@media (min-width: 1281px) {
+  nz-carousel {
+    height: 300px !important;
+  }
+}

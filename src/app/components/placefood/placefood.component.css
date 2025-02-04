@@ -123,3 +123,106 @@ input:focus {
     width: 60vw;
   }
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .cabecalho {
+    background-color: var(--verde-claro);
+  }
+
+  .logo-placefood {
+    display: none;
+  }
+
+  .buscar {
+    background-color: var(--verde);
+  }
+
+  .cria-conta,
+  .logar {
+    display: flex;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  section {
+    background-color: var(--verde-claro);
+  }
+
+  input {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .logo-placefood {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: -20px;
+    object-fit: cover;
+    padding-top: 10px;
+    z-index: 10001;
+  }
+
+  input {
+    margin-left: 150px !important;
+  }
+
+  .cria-conta,
+  .logar {
+    display: flex;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .logo-placefood {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: -20px;
+    object-fit: cover;
+    padding-top: 10px;
+    z-index: 10001;
+  }
+
+  input {
+    margin-left: 150px !important;
+  }
+
+  .cria-conta,
+  .logar {
+    display: flex;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1281px) {
+  .logo-placefood {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: -20px;
+    object-fit: cover;
+    padding-top: 10px;
+    z-index: 10001;
+  }
+
+  input {
+    margin-left: 150px !important;
+  }
+
+  .botoes-conta {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .cria-conta,
+  .logar {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}

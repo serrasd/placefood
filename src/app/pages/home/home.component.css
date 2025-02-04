@@ -13,6 +13,7 @@
 .destaques-cards,
 .hortifruti-cards {
   display: flex;
+  justify-content: space-evenly !important;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
@@ -30,6 +31,15 @@
     gap: 0px;
   }
 
+  .titulo-sugeridos,
+  .titulo-destaques,
+  .titulo-hortifruti {
+    margin-left: 20px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
   .titulo-sugeridos,
   .titulo-destaques,
   .titulo-hortifruti {

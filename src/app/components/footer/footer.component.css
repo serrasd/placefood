@@ -90,6 +90,48 @@ h3 {
     height: auto;
   }
 
+  .banner-footer {
+    height: 300px;
+  }
+
+  .conteudo-banner {
+    font-size: 0.8rem;
+  }
+
+  .botao-whatsapp {
+    margin-top: 15px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .conteudo-footer {
+    margin-top: 40px;
+  }
+
+  img {
+    width: 350px;
+  }
+
+  .rodape {
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .atendente {
+    width: 100px;
+    height: auto;
+  }
+
+  .banner-footer {
+    height: 200px;
+  }
+
   .conteudo-banner {
     font-size: 0.8rem;
   }

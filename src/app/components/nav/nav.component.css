@@ -49,3 +49,22 @@ select option {
     width: 20vw;
   }
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  nav {
+    height: 40px;
+  }
+
+  select {
+    width: 85px;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+}

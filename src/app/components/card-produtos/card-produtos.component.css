@@ -84,7 +84,7 @@ button {
 
 @media (max-width: 480px) {
   .card-busca {
-    width: 95%;
+    width: 80%;
     height: 80%;
     margin: 0;
   }

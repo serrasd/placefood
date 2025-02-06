@@ -3,10 +3,10 @@ nav {
   height: 40px;
   padding-top: 10px;
   position: fixed;
-  top: 65px;
+  top: 60px;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1001;
 }
 
 ul {
@@ -19,6 +19,8 @@ ul {
 }
 
 select {
+  display: flex;
+  align-items: center;
   width: auto;
   font-weight: 600;
   background: none;

@@ -1,5 +1,6 @@
 nz-carousel {
   height: 270px !important;
+  z-index: 1001;
 }
 
 [nz-carousel-content] {
@@ -11,6 +12,7 @@ nz-carousel {
 
 img {
   width: 95%;
+  height: 100%;
   margin-bottom: 0;
   user-select: none;
   margin: 0 auto;

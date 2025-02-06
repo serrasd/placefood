@@ -5,7 +5,7 @@
   align-items: center;
   position: fixed;
   z-index: 1000;
-  top: 0px;
+  top: -3px;
 }
 
 .header {
@@ -19,6 +19,7 @@
   height: 50px;
   object-fit: cover;
   padding-top: 10px;
+  padding-left: 20px;
 }
 
 .example-spacer {
@@ -34,17 +35,18 @@ section {
   width: 100%;
   position: fixed;
   z-index: 1000;
-  top: 10px;
+  top: 7px;
 }
 
 form {
   display: flex;
+  justify-content: center;
   gap: 0px;
 }
 
 input {
   padding: 0 1em;
-  width: 60vw;
+  width: 65vw;
   border-radius: 5px 0px 0px 5px;
   border: 2px solid var(--verde-logo);
   border-right: none;

@@ -8,6 +8,10 @@
   top: -3px;
 }
 
+a {
+  z-index: 1001;
+}
+
 .header {
   height: 65px;
   display: flex;
@@ -74,7 +78,6 @@ input:focus {
 
 .botoes-conta {
   display: flex;
-  gap: 20px;
 }
 
 .cria-conta,

@@ -28,7 +28,6 @@ ul {
 select {
   display: flex;
   align-items: center;
-  width: auto;
   font-weight: 600;
   background: none;
   border: none;

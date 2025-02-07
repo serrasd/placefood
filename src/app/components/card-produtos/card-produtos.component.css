@@ -68,7 +68,7 @@ button {
 
 @media (max-width: 480px) {
   .card-busca {
-    width: 80%;
+    width: 100%;
     height: 80%;
     margin: 0;
   }
@@ -93,6 +93,7 @@ button {
 
   .card-busca button {
     font-size: 0.9rem;
+    width: 100%;
   }
 
   .card-busca mat-card-actions {

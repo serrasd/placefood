@@ -4,7 +4,6 @@
   border-left: 5px solid var(--verde);
   padding-left: 20px;
   font-size: 1.3rem;
-  margin-left: 40px;
   font-weight: 600;
   margin-top: 30px;
 }
@@ -34,7 +33,6 @@
   .titulo-sugeridos,
   .titulo-destaques,
   .titulo-hortifruti {
-    margin-left: 20px;
     font-weight: 600;
   }
 }
@@ -43,7 +41,6 @@
   .titulo-sugeridos,
   .titulo-destaques,
   .titulo-hortifruti {
-    margin-left: 20px;
     font-weight: 600;
   }
 }

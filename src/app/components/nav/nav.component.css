@@ -3,10 +3,18 @@ nav {
   height: 40px;
   padding-top: 10px;
   position: fixed;
-  top: 65px;
-  left: 0;
+  top: 60px;
   width: 100%;
-  z-index: 999;
+  z-index: 1001;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 ul {
@@ -14,11 +22,12 @@ ul {
   flex-wrap: wrap;
   list-style-type: none;
   justify-content: space-around;
-  margin: 0;
   padding: 0;
 }
 
 select {
+  display: flex;
+  align-items: center;
   width: auto;
   font-weight: 600;
   background: none;

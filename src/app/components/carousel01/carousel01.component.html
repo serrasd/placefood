@@ -1,5 +1,5 @@
 @defer {
-<nz-carousel nzAutoPlay>
+<nz-carousel nzAutoPlay [nzAutoPlaySpeed]="5000">
   @for (index of array; track index) {
   <div nz-carousel-content>
     <img [src]="index" alt="" />

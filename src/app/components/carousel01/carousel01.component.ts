@@ -10,8 +10,8 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 })
 export class NzDemoCarouselAutoplayComponent {
   array = [
+    './assets/banner.png',
     './assets/banner2.png',
     './assets/banner4.png',
-    './assets/banner.png',
   ];
 }

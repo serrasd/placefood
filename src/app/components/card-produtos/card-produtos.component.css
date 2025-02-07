@@ -1,5 +1,5 @@
 .card-busca {
-  width: 320px;
+  width: 300px;
   height: 400px;
   border-radius: 12px;
   margin: 15px;
@@ -7,13 +7,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
   transition: transform 0.3s;
 }
 
-.card-busca img {
-  width: 200px;
-  height: 175px;
+.imagem-card {
+  width: 50% !important;
   object-fit: cover;
   display: flex;
   justify-content: center;
@@ -37,30 +35,16 @@
   align-items: center;
 }
 
-.card-busca ul {
-  list-style: none;
-  padding: 0;
+.titulo-card {
+  font-size: 1.1rem;
+  text-align: center;
+  width: 90%;
 }
 
-.card-busca ul li {
-  padding-bottom: 12px;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: var(--preto);
-  text-align: center;
-}
-
-.card-busca h2 {
-  padding-top: 20px;
-  font-size: 1.2rem;
-  text-align: center;
-  overflow: hidden;
-  white-space: normal;
-  text-overflow: ellipsis;
-  width: 100%;
-  margin-bottom: 10px;
-  word-wrap: break-word;
-  hyphens: auto;
+.preco-card {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: green;
 }
 
 .card-busca mat-card-actions {

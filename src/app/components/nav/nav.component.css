@@ -4,7 +4,6 @@ nav {
   padding-top: 10px;
   position: fixed;
   top: 60px;
-  left: 0;
   width: 100%;
   z-index: 1001;
 }
@@ -23,7 +22,6 @@ ul {
   flex-wrap: wrap;
   list-style-type: none;
   justify-content: space-around;
-  margin: 0;
   padding: 0;
 }
 

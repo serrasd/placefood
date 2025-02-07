@@ -1,10 +1,8 @@
 <mat-card class="card-busca">
-  <img mat-card-image [src]="imagem" [alt]="nome" />
+  <img class="imagem-card" mat-card-image [src]="imagem" [alt]="nome" />
   <mat-card-content>
-    <h2>{{ nome }}</h2>
-    <ul>
-      <li>R$ {{ preco }}</li>
-    </ul>
+    <h3 class="titulo-card" >{{ nome }}</h3>
+      <p class="preco-card" >R$ {{ preco }}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button>Adicionar</button>

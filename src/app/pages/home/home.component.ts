@@ -27,9 +27,19 @@ export class HomeComponent {
       preco: 18.47,
     },
     {
-      nome: 'Pão de alho Santa Massa Tradicional',
+      nome: 'Pão de Alho Santa Massa Tradicional',
       imagem: 'assets/pao-de-alho.png',
       preco: 16.82,
+    },
+    {
+      nome: 'Coca Cola Sem Açúcar 2L',
+      imagem: 'assets/coca-cola-zero-2l.png',
+      preco: 9.79,
+    },
+    {
+      nome: 'Batata Pré-Frita Sadia 1,05Kg',
+      imagem: 'assets/batata-congelada-sadia.png',
+      preco: 24.99,
     },
   ];
   destaques = [
@@ -53,6 +63,16 @@ export class HomeComponent {
       imagem: 'assets/leite-integral-italac.png',
       preco: 4.99,
     },
+    {
+      nome: 'Suco de Laranja Natural One 1,5L',
+      imagem: 'assets/suco-de-laranja.png',
+      preco: 19.79,
+    },
+    {
+      nome: 'Suco Del Valle Uva 1L',
+      imagem: 'assets/del-valle-uva.png',
+      preco: 7.99,
+    },
   ];
   hortifruti = [
     { nome: 'Maçã Gala Aprox 600g', imagem: 'assets/maca.png', preco: 8.63 },
@@ -70,6 +90,16 @@ export class HomeComponent {
       nome: 'Limão Orgânico 500g',
       imagem: 'assets/limao-organico.png',
       preco: 6.79,
+    },
+    {
+      nome: 'Laranja Bahia Importada 1Kg',
+      imagem: 'assets/laranja-bahia-importada.png',
+      preco: 15.29,
+    },
+    {
+      nome: 'Uva Escura sem Semente 500g',
+      imagem: 'assets/uva.png',
+      preco: 7.99,
     },
   ];
 }

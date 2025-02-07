@@ -1,32 +1,44 @@
 <h1 class="titulo-sugeridos">Produtos sugeridos</h1>
-<div class="sugerido-cards">
-  <app-card-produtos
-    *ngFor="let produto of produtos"
-    [nome]="produto.nome"
-    [imagem]="produto.imagem"
-    [preco]="produto.preco"
-  >
-  </app-card-produtos>
+<div class="carrossel-container">
+  <button class="btn-esquerda" (click)="scrollLeft('sugerido-cards')">&#8249;</button>
+  <div class="sugerido-cards" id="sugerido-cards">
+    <app-card-produtos
+      *ngFor="let produto of produtos"
+      [nome]="produto.nome"
+      [imagem]="produto.imagem"
+      [preco]="produto.preco"
+    >
+    </app-card-produtos>
+  </div>
+  <button class="btn-direita" (click)="scrollRight('sugerido-cards')">&#8250;</button>
 </div>
 
 <h1 class="titulo-destaques">Destaques do dia</h1>
-<div class="destaques-cards">
-  <app-card-produtos
-    *ngFor="let destaque of destaques"
-    [nome]="destaque.nome"
-    [imagem]="destaque.imagem"
-    [preco]="destaque.preco"
-  >
-  </app-card-produtos>
+<div class="carrossel-container">
+  <button class="btn-esquerda" (click)="scrollLeft('destaques-cards')">&#8249;</button>
+  <div class="destaques-cards" id="destaques-cards">
+    <app-card-produtos
+      *ngFor="let destaque of destaques"
+      [nome]="destaque.nome"
+      [imagem]="destaque.imagem"
+      [preco]="destaque.preco"
+    >
+    </app-card-produtos>
+  </div>
+  <button class="btn-direita" (click)="scrollRight('destaques-cards')">&#8250;</button>
 </div>
 
 <h1 class="titulo-hortifruti">Hortifruti</h1>
-<div class="hortifruti-cards">
-  <app-card-produtos
-    *ngFor="let hortifruti of hortifruti"
-    [nome]="hortifruti.nome"
-    [imagem]="hortifruti.imagem"
-    [preco]="hortifruti.preco"
-  >
-  </app-card-produtos>
+<div class="carrossel-container">
+  <button class="btn-esquerda" (click)="scrollLeft('hortifruti-cards')">&#8249;</button>
+  <div class="hortifruti-cards" id="hortifruti-cards">
+    <app-card-produtos
+      *ngFor="let hortifruti of hortifruti"
+      [nome]="hortifruti.nome"
+      [imagem]="hortifruti.imagem"
+      [preco]="hortifruti.preco"
+    >
+    </app-card-produtos>
+  </div>
+  <button class="btn-direita" (click)="scrollRight('hortifruti-cards')">&#8250;</button>
 </div>

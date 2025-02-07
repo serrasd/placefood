@@ -10,6 +10,22 @@ import { CardProdutosComponent } from '../../components/card-produtos/card-produ
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
+
+  scrollLeft(carouselId: string): void {
+    const carousel = document.getElementById(carouselId);
+    if (carousel) {
+      carousel.scrollBy({ left: -350, behavior: 'smooth' });
+    }
+  }
+
+  scrollRight(carouselId: string): void {
+    const carousel = document.getElementById(carouselId);
+    if (carousel) {
+      carousel.scrollBy({ left: 350, behavior: 'smooth' });
+    }
+  }
+
+
   produtos = [
     {
       nome: 'Filé de Frango Peito Sadia 1Kg',

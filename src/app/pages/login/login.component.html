@@ -1,7 +1,7 @@
 <div class="container">
   <div class="conteudo">
     <img src="./assets/logo-placefood.png" alt="">
-    <p>O Placefood ajuda você a descobrir e saborear os melhores alimentos</p>
+    <p>O Placefood ajuda você a descobrir e saborear os melhores alimentos.</p>
   </div>
 
   <div class="login">
@@ -9,12 +9,12 @@
       <h1>Olá!</h1>
       <h2>Bem-vindo de volta</h2>
     </div>
-    <form>
-      <input type="text" id="usuario" placeholder="Usuário ou email" required />
-      <input type="password" id="senha" placeholder="Senha" required />
+    <form (ngSubmit)="onSubmit()">
+      <input type="text" id="usuario" placeholder="Usuário ou email" [(ngModel)]="usuario" name="usuario" required />
+      <input type="password" id="senha" placeholder="Senha" [(ngModel)]="senha" name="senha" required />
       <button type="submit">Entrar</button>
-      <a href="">Esqueceu a senha?</a>
-      <button>Criar nova conta</button>
+      <a href="#">Esqueceu a senha?</a>
+      <button type="button">Criar nova conta</button>
     </form>
   </div>
 </div>

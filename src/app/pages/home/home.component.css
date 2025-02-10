@@ -75,6 +75,11 @@
   overflow-x: auto;
 }
 
+.margem {
+  overflow-x: hidden;
+  margin: 0px 40px 0px 40px;
+}
+
 /* MEDIAQUERIES */
 
 @media (max-width: 480px) {

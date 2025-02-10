@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NzDemoCarouselAutoplayComponent } from '../../components/carousel01/carousel01.component';
 import { CardProdutosComponent } from '../../components/card-produtos/card-produtos.component';
+import { FooterComponent } from "../../components/footer/footer.component";
+import { NavComponent } from '../../components/nav/nav.component';
+import { PlacefoodComponent } from '../../components/placefood/placefood.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardProdutosComponent, CommonModule],
+  imports: [CardProdutosComponent, CommonModule, FooterComponent, NavComponent, PlacefoodComponent, NzDemoCarouselAutoplayComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

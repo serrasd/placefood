@@ -1,4 +1,9 @@
-<h1 class="titulo-sugeridos">Produtos sugeridos</h1>
+<app-placefood></app-placefood>
+<app-nav></app-nav>
+
+<div class="margem">
+  <nz-demo-carousel-autoplay></nz-demo-carousel-autoplay>
+  <h1 class="titulo-sugeridos">Produtos sugeridos</h1>
 <div class="carrossel-container">
   <button class="btn-esquerda" (click)="scrollLeft('sugerido-cards')">&#8249;</button>
   <div class="sugerido-cards" id="sugerido-cards">
@@ -42,3 +47,6 @@
   </div>
   <button class="btn-direita" (click)="scrollRight('hortifruti-cards')">&#8250;</button>
 </div>
+</div>
+
+<app-footer></app-footer>

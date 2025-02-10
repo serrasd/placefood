@@ -10,6 +10,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { NzDemoCarouselAutoplayComponent } from './components/carousel01/carousel01.component';
 import { ContainerComponent } from './components/container/container.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from "./pages/home/home.component";
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ContainerComponent,
     NzDemoCarouselAutoplayComponent,
     FooterComponent,
-  ],
+    HomeComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

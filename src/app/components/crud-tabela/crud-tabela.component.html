@@ -1,0 +1,33 @@
+<div class="form-container">
+  <input [(ngModel)]="formData.nome" placeholder="Nome do produto" />
+  <input [(ngModel)]="formData.descricao" placeholder="Preço do produto" />
+  <button (click)="addItem()">Salvar</button>
+  <button (click)="resetForm()">Cancelar</button>
+</div>
+
+<div class="search-container">
+  <input [(ngModel)]="searchQuery" placeholder="Buscar por nome" />
+</div>
+
+<div class="table-container">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+        <th scope="col">Nome do produto</th>
+        <th scope="col">Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filterItems(); let i = index">
+        <td>{{ item.nome }}</td>
+        <td>{{ item.descricao }}</td>
+        <td>{{ item.habilidades }}</td>
+        <td>{{ item.armas }}</td>
+        <td>
+          <button (click)="editItem(i)">Editar</button>
+          <button (click)="deleteItem(i)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

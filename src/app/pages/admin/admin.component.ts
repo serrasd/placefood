@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { AdminHeaderComponent } from "../../components/admin-header/admin-header.component";
 import { CrudTableComponent } from "../../components/crud-tabela/crud-tabela.component"
+import { AdminHeaderComponent } from "../../components/admin-header/admin-header.component";
 
 @Component({
   selector: 'app-admin',
-  imports: [AdminHeaderComponent, CrudTableComponent],
+  imports: [CrudTableComponent, AdminHeaderComponent],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })

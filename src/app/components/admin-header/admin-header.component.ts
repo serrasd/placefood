@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-admin-header',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './admin-header.component.html',
   styleUrl: './admin-header.component.css'
 })

@@ -266,14 +266,19 @@ ul {
 .dropdown button {
   display: flex;
   align-items: center;
-  font-weight: 600;
   background: none;
   border: none;
   cursor: pointer;
   color: black;
 }
 
+.dropdown button:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 .dropdown-menu {
+  background-color: #d1f0c4 !important;
   display: none;
   position: absolute;
   top: 100%;

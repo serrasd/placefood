@@ -2,7 +2,6 @@
   <input placeholder="Buscar por nome" />
 </div>
 
-
 <div class="table-container">
   <table class="table align-middle">
     <thead>
@@ -14,8 +13,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>teste</td>
+      <tr *ngFor="let produto of produtos">
+        <td><img [src]="produto.imagem" alt=""></td>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.preco }}</td>
+        <td>
+          <button class="salvar">Editar</button>
+          <button class="excluir">Excluir</button>
+        </td>
       </tr>
     </tbody>
   </table>

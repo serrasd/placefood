@@ -1,0 +1,72 @@
+.campo-pesquisa {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Estilo para o contêiner da tabela */
+.table-container {
+
+  width: 100%;
+  max-width: 1200px; /* Aumenta o tamanho máximo da tabela */
+  margin: 0 auto; /* Centraliza a tabela na página */
+  padding: 20px;
+  background-color: #f0f8f0; /* Fundo verde claro */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para a tabela */
+.table {
+  border-collapse: collapse;
+  font-size: 1.1em;
+}
+
+.table thead {
+  background-color: #2e8b57;
+  color: white;
+}
+
+.table th {
+  padding: 15px;
+  text-align: left;
+}
+
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.table tbody tr:hover {
+  background-color: #e0f0e0;
+}
+
+.btn-gerenciar {
+  background-color: #3cb371;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gerenciar:hover {
+  background-color: #2e8b57; /* Verde escuro ao passar o mouse */
+}

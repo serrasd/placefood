@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "server": "npx tsx server.ts",
     "serve:ssr:placefood-developer": "node dist/placefood-developer/server/server.mjs"
   },
   "private": true,
@@ -32,6 +33,7 @@
     "ng-zorro-antd": "^19.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "tsx": "^4.19.2",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

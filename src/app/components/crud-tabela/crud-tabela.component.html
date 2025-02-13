@@ -1,46 +1,18 @@
 <div class="crud">
-  <div class="form-container">
-    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
-    <input [(ngModel)]="formData.nome" placeholder="Nome do produto" />
-    <input [(ngModel)]="formData.preco" type="number" placeholder="Preço do produto" />
-  </div>
+  <form class="form-container">
+    <input name="imagem" type="file" accept="image/*" />
+    <input name="nome" [(ngModel)]="novoProduto.nome" placeholder="Nome do produto" />
+    <input name="preco" [(ngModel)]="novoProduto.preco" type="number" placeholder="Preço do produto" />
+
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" [(ngModel)]="novoProduto.categoria" name="categoria">
+      <option value="produtos">Produtos</option>
+      <option value="destaques">Destaques</option>
+      <option value="hortifruti">Hortifruti</option>
+    </select>
 
     <div class="salvar-editar-excluir">
-      <button class="salvar-editar" (click)="addItem()">{{ editingIndex === null ? 'Salvar' : 'Editar' }}</button>
-      <button class="excluir" (click)="resetForm()">Cancelar</button>
+      <button type="submit" (click)="enviar()" class="salvar-editar">Salvar</button>
+      <button type="submit" class="excluir">Cancelar</button>
     </div>
-
-  <div class="search-container">
-    <input [(ngModel)]="searchQuery" placeholder="Buscar por nome" />
-  </div>
-
-
-  <div class="table-container">
-    <table class="table align-middle">
-      <thead>
-        <tr>
-          <th scope="col">Imagem</th>
-          <th scope="col">Nome do produto</th>
-          <th scope="col">Preço</th>
-          <th scope="col">Gerenciar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of filterItems(); let i = index">
-
-          <td>
-            <img [src]="item.imagem" alt="Imagem do produto" width="50" />
-          </td>
-
-          <td>{{ item.nome }}</td>
-          <td>{{ item.preco | currency:'BRL' }}</td>
-
-          <td>
-            <button class="editar-tabela" (click)="editItem(i)">Editar</button>
-            <button class="excluir-tabela" (click)="deleteItem(i)">Excluir</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+  </form>

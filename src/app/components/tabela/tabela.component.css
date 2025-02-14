@@ -57,7 +57,7 @@
 }
 
 .table th {
-  width: auto; /* Ajusta dinamicamente com base no conteúdo */
+  width: auto;
 }
 
 .table tbody tr {
@@ -72,20 +72,6 @@
   width: 100px;
   height: auto;
   object-fit: cover;
-}
-
-.btn-gerenciar {
-  background-color: #3cb371;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-gerenciar:hover {
-  background-color: #2e8b57;
 }
 
 .salvar,
@@ -106,7 +92,12 @@
   transition: transform 0.1s;
 }
 
-.icone-editar:hover, .icone-deletar:hover {
+.icone-editar:hover {
   transform: scale(1.2);
-  color: var(--verde-logo);
+  color: var(--preto);
+}
+
+.icone-deletar:hover {
+  transform: scale(1.2);
+  color: red;
 }

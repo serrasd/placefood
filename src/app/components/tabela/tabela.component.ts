@@ -39,15 +39,20 @@ filtrarProdutos(): void {
 }
 
 deletar(id: string) {
-  console.log('botao clicado')
-  this.http.delete(`http://localhost:3000/deletar-produto/${id}`).subscribe(
-    (response) => {
-      console.log('Produto deletado com sucesso', response);
-    },
-    (error) => {
-      console.log('Erro ao deletar produto', error);
+  const confirmacao = window.confirm('Você tem certeza que deseja excluir este produto?');
+  if (confirmacao) {
+    console.log('Botão clicado');
+    this.http.delete(`http://localhost:3000/deletar-produto/${id}`).subscribe(
+      (response) => {
+        console.log('Produto deletado com sucesso', response);
+      },
+      (error) => {
+        console.log('Erro ao deletar produto', error);
       }
-   );
-
+    );
+  } else {
+    console.log('Exclusão cancelada');
   }
+}
+
 }

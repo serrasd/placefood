@@ -4,10 +4,11 @@ import { Produto } from "../../interface/produto.model"
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-tabela',
-  imports: [CommonModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, RouterModule],
   templateUrl: './tabela.component.html',
   styleUrl: './tabela.component.css'
 })

@@ -1,21 +1,21 @@
 .cabecalho {
-  background-color: var(--branco);
+  background-color: #F2F4F7;
   width: 100%;
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 1000;
   top: -3px;
 }
 
 a {
-  z-index: 1001;
+  color: var(--preto);
 }
 
 .header {
   height: 65px;
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 .logo-placefood {
@@ -24,227 +24,31 @@ a {
   object-fit: cover;
   padding-top: 10px;
   padding-left: 20px;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-mat-toolbar {
-  background-color: transparent;
+  cursor: pointer;
 }
 
 section {
-  background-color: var(--branco);
   width: 100%;
   position: fixed;
-  z-index: 1000;
   top: 7px;
 }
 
-form {
+.dashboard, .pedidos, .usuarios, .configuracoes, .sair {
   display: flex;
-  justify-content: center;
-  gap: 0px;
+  align-items: center;
+  gap: 10px;
 }
 
-input {
-  padding: 0 1em;
-  width: 67vw;
-  border-radius: 5px 0px 0px 5px;
-  border: 2px solid var(--verde-logo);
-  border-right: none;
-}
-
-input:focus {
-  border: 1px solid var(--verde-claro);
-}
-
-.buscar {
-  border: none;
-  background-color: var(--verde-claro);
-  height: 45px;
-  padding: 10px 20px;
-  border-radius: 1px;
-  margin-right: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: border 0.3s ease;
-  border-radius: 0px 5px 5px 0px;
-}
-
-.buscar:hover {
-  border-color: var(--verde);
-}
-
-.botoes-conta {
-  display: flex;
-}
-
-.cria-conta,
-.logar {
-  color: var(--preto) !important;
-  border: none;
-  cursor: pointer;
-}
-
-.cria-conta:hover,
-.logar:hover {
-  text-decoration: underline;
-}
-
-/* MEDIAQUERIES */
-
-@media (max-width: 480px) {
-  .cabecalho {
-    background-color: var(--verde-claro);
-  }
-
-  .logo-placefood {
-    display: none;
-  }
-
-  .buscar {
-    background-color: var(--verde);
-  }
-
-  .botoes-conta {
-    display: none;
-  }
-
-  section {
-    background-color: var(--verde-claro);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  form {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  input {
-    width: 60vw;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .cabecalho {
-    background-color: var(--verde-claro);
-  }
-
-  .logo-placefood {
-    display: none;
-  }
-
-  .buscar {
-    background-color: var(--verde);
-  }
-
-  .cria-conta,
-  .logar {
-    display: flex;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-
-  section {
-    background-color: var(--verde-claro);
-  }
-
-  input {
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 767px) and (max-width: 1024px) {
-  .logo-placefood {
-    display: block;
-    width: 200px;
-    height: 50px;
-    margin-left: -20px;
-    object-fit: cover;
-    padding-top: 10px;
-    z-index: 10001;
-  }
-
-  input {
-    margin-left: 150px !important;
-  }
-
-  .cria-conta,
-  .logar {
-    display: flex;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .logo-placefood {
-    display: block;
-    width: 200px;
-    height: 50px;
-    margin-left: -20px;
-    object-fit: cover;
-    padding-top: 10px;
-    z-index: 10001;
-  }
-
-  input {
-    margin-left: 150px !important;
-  }
-
-  .cria-conta,
-  .logar {
-    display: flex;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-}
-
-@media (min-width: 1281px) {
-  .logo-placefood {
-    display: block;
-    width: 200px;
-    height: 50px;
-    margin-left: -20px;
-    object-fit: cover;
-    padding-top: 10px;
-    z-index: 10001;
-  }
-
-  input {
-    margin-left: 150px !important;
-  }
-
-  .botoes-conta {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .cria-conta,
-  .logar {
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
+mat-icon {
+  color: var(--verde-claro);
 }
 
 nav {
-  background-color: var(--verde-claro);
+  margin-left: 50px;
   height: 40px;
   padding-top: 10px;
   position: fixed;
-  top: 60px;
   width: 100%;
-  z-index: 1001;
-}
-
-a {
-  color: black;
 }
 
 a:hover {
@@ -256,56 +60,67 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0;
 }
 
-.dropdown {
-  position: relative;
+/* MEDIAQUERIES */
+
+@media (max-width: 480px) {
+  .cabecalho {
+    background-color: var(--verde-claro);
+  }
+
+  .logo-placefood {
+    display: none;
+  }
+
 }
 
-.dropdown button {
-  display: flex;
-  align-items: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: black;
+@media (min-width: 481px) and (max-width: 767px) {
+  .cabecalho {
+    background-color: var(--verde-claro);
+  }
+
+  .logo-placefood {
+    display: none;
+  }
+
 }
 
-.dropdown button:hover {
-  text-decoration: underline;
-  font-weight: 500;
+@media (min-width: 767px) and (max-width: 1024px) {
+  .logo-placefood {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: -20px;
+    object-fit: cover;
+    padding-top: 10px;
+  }
+
 }
 
-.dropdown-menu {
-  background-color: #d1f0c4 !important;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--branco);
-  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px 30px 0px 0px;
-  z-index: 1000;
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .logo-placefood {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: -20px;
+    object-fit: cover;
+    padding-top: 10px;
+  }
+
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: var(--preto);
-  white-space: nowrap;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu a:hover {
-  text-decoration: underline;
-  color: var(--verde);
+@media (min-width: 1281px) {
+  .logo-placefood {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-left: -20px;
+    object-fit: cover;
+    padding-top: 10px;
+  }
 }
 
 /* MEDIAQUERIES */
@@ -317,20 +132,12 @@ ul {
     font-size: 0.8em;
     justify-content: space-evenly;
   }
-
-  select {
-    width: 20vw;
-  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
 
   nav {
     height: 40px;
-  }
-
-  select {
-    width: 85px;
   }
 
   ul {

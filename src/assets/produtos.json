@@ -1,13 +1,5 @@
 {
-  "produtos": [
-    {
-      "imagem": "",
-      "nome": "alface",
-      "preco": 200,
-      "categoria": "produtos",
-      "id": "i1akrlplty572bszh8zuh44f"
-    }
-  ],
+  "produtos": [],
   "destaques": [],
   "hortifruti": []
 }

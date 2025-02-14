@@ -1,5 +1,10 @@
 <div class="campo-pesquisa">
-  <input placeholder="Buscar por nome" />
+  <input
+    type="text"
+    placeholder="Buscar por nome"
+    [(ngModel)]="filtro"
+    (input)="filtrarProdutos()"
+  />
 
   <a href="" title="Adicionar novo produto" [routerLink]="'/formulario'">
   <mat-icon class="adicionar-novo-produto"
@@ -21,7 +26,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let produto of produtos">
+      <tr *ngFor="let produto of produtosFiltrados">
         <td><img class="imagens-produtos" [src]="produto.imagem" alt="" /></td>
         <td>{{ produto.nome }}</td>
         <td>{{ produto.preco }}</td>

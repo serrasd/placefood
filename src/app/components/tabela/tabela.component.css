@@ -79,6 +79,7 @@
 
 .salvar,
 .excluir {
+  cursor: pointer;
   border-radius: 8px;
   border: 1px solid var(--cinza-claro);
   padding: 14px 16px;
@@ -91,4 +92,10 @@
   color: var(--verde);
   justify-content: center;
   align-items: center;
+  transition: transform 0.1s;
+}
+
+.icone-editar:hover, .icone-deletar:hover {
+  transform: scale(1.2);
+  color: var(--verde-logo);
 }

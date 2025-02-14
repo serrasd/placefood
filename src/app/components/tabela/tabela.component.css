@@ -7,9 +7,12 @@
 }
 
 .adicionar-novo-produto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 60px;
   color: var(--verde);
-  width: 100px;
+  width: 70px;
   height: auto;
 }
 

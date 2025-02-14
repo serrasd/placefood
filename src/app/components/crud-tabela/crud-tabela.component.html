@@ -3,7 +3,8 @@
 <div class="crud">
   <h1>Cadastre um novo produto</h1>
   <form class="form-container">
-    <input name="imagem" type="file" accept="image/*" />
+    <img class="imagem-preview" *ngIf="urlPreview" (change)="converterImagem($event)" [src]="urlPreview">
+    <input (change)="converterImagem($event)" name="imagem" type="file" accept="image/*" required/>
     <input name="nome" [(ngModel)]="novoProduto.nome" placeholder="Nome do produto" />
     <input name="preco" [(ngModel)]="novoProduto.preco" type="number" placeholder="Preço do produto" />
 
@@ -16,6 +17,6 @@
 
     <div class="salvar-editar-excluir">
       <button type="submit" (click)="enviar()" class="salvar-editar">Salvar</button>
-      <button type="submit" class="excluir">Cancelar</button>
+      <button type="submit" (click)="cancelar()" class="cancelar">Cancelar</button>
     </div>
   </form>

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { AdminHeaderComponent } from "../admin-header/admin-header.component";
 
 @Component({
   selector: 'app-crud-table',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, AdminHeaderComponent],
   templateUrl: './crud-tabela.component.html',
   styleUrls: ['./crud-tabela.component.css'],
 })
@@ -37,8 +38,9 @@ export class CrudTableComponent {
     );
   }
 
-
   gerarId(): string {
     return [...Array(24)].map(() => Math.random().toString(36)[2]).join('');
   }
+
+
 }

@@ -8,15 +8,31 @@
 
 .form-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
 }
 
 .form-container input {
-  border: 1px solid #BFC1C5;
+  border: 1px solid var(--verde-claro);
   outline: none;
   padding: 10px;
   border-radius: 10px;
-  width: 300px;
+  width: 400px;
+}
+
+.form-container input:focus {
+  border: 2px solid var(--verde-claro);
+  outline: none;
+}
+
+#categoria {
+  padding: 10px;
+  border: 1px solid #BFC1C5;
+  border-radius: 10px;
+  outline: none;
+  width: 400px;
 }
 
 .form-container input:focus {

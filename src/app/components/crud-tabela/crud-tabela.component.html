@@ -1,11 +1,14 @@
+<app-admin-header></app-admin-header>
+
 <div class="crud">
+  <h1>Cadastre um novo produto</h1>
   <form class="form-container">
     <input name="imagem" type="file" accept="image/*" />
     <input name="nome" [(ngModel)]="novoProduto.nome" placeholder="Nome do produto" />
     <input name="preco" [(ngModel)]="novoProduto.preco" type="number" placeholder="Preço do produto" />
 
-    <label for="categoria">Categoria:</label>
     <select id="categoria" [(ngModel)]="novoProduto.categoria" name="categoria">
+      <option value="" disabled selected>Selecione uma categoria</option>
       <option value="produtos">Produtos</option>
       <option value="destaques">Destaques</option>
       <option value="hortifruti">Hortifruti</option>

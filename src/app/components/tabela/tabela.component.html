@@ -14,15 +14,28 @@
     </thead>
     <tbody>
       <tr *ngFor="let produto of produtos">
-        <td><img [src]="produto.imagem" alt=""></td>
+        <td><img class="imagens-produtos" [src]="produto.imagem" alt="" /></td>
         <td>{{ produto.nome }}</td>
         <td>{{ produto.preco }}</td>
         <td>
-          <button class="salvar">Editar</button>
-          <button class="excluir">Excluir</button>
+          <button class="salvar">
+            <mat-icon
+              class="icone-editar"
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="edit"
+            ></mat-icon>
+          </button>
+          <button (click)="deletar(produto.id)" class="excluir">
+            <mat-icon
+              class="icone-deletar"
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="delete"
+            ></mat-icon>
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-

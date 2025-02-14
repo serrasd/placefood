@@ -1,58 +1,66 @@
 .campo-pesquisa {
-  margin-top: 150px;
+  margin-top: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.table-container {
-  display: flex;
-  justify-content: center;
+.campo-pesquisa input {
+  border-radius: 5px;
+  height: 40px;
+  width: 300px;
+  padding: 0 1em;
+  border: 2px solid var(--verde-logo);
 }
 
-.table {
-  display: flex;
-  flex-direction: column;
-} */
+.campo-pesquisa input:focus {
+  border: 2px solid var(--verde-claro);
+  outline: none;
+}
 
 .table-container {
-
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f0f8f0;
+  background-color: #F2F4F7;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .table {
+  width: 100%;
   border-collapse: collapse;
   font-size: 1.1em;
 }
 
 .table thead {
-  background-color: #2e8b57;
+  background-color: var(--verde);
   color: white;
 }
 
-.table th {
-  padding: 15px;
-  text-align: left;
-}
-
-
-.table tbody tr {
-  border-bottom: 1px solid #ddd;
-}
-
+.table th,
 .table td {
   padding: 15px;
   text-align: left;
 }
 
+.table th {
+  width: auto; /* Ajusta dinamicamente com base no conteúdo */
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
 .table tbody tr:hover {
   background-color: #e0f0e0;
+}
+
+.imagens-produtos {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
 }
 
 .btn-gerenciar {
@@ -69,10 +77,18 @@
   background-color: #2e8b57;
 }
 
-.salvar{
-  padding: 40px;
+.salvar,
+.excluir {
+  border-radius: 8px;
+  border: 1px solid var(--cinza-claro);
+  padding: 14px 16px;
+  margin: 5px;
+  width: auto;
 }
 
-.excluir {
-  padding: 40px;
+.icone-editar, .icone-deletar {
+  display: flex;
+  color: var(--verde);
+  justify-content: center;
+  align-items: center;
 }

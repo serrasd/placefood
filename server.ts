@@ -32,7 +32,7 @@ app.get('/produtos', (req, res) => {
 app.post('/adicionar-produto', (req, res) => {
   fs.readFile(produtosJson, (err, data) => {
     if (err) {
-      return res.status(500).json({ message: 'Erro ao ler arquivo json' });
+      res.status(500).json({ message: 'Erro ao ler arquivo json' });
     }
 
     let produtosJsonData;
@@ -40,14 +40,14 @@ app.post('/adicionar-produto', (req, res) => {
     try {
       produtosJsonData = JSON.parse(data.toString());
     } catch (error) {
-      return res.status(500).json({ message: 'Erro ao interpretar json' });
+      res.status(500).json({ message: 'Erro ao interpretar json' });
     }
 
     const { categoria, novoProduto } = req.body;
 
 
     if (!produtosJsonData[categoria]) {
-      return res.status(400).json({ message: 'Categoria inválida' });
+      res.status(400).json({ message: 'Categoria inválida' });
     }
 
     produtosJsonData[categoria].push(novoProduto);
@@ -64,7 +64,7 @@ app.post('/adicionar-produto', (req, res) => {
 app.delete('/deletar-produto/:id', (req, res) => {
   fs.readFile(produtosJson, 'utf8', (err, data) => {
     if (err) {
-      return res.status(500).json({ message: 'Erro ao ler arquivo json' });
+      res.status(500).json({ message: 'Erro ao ler arquivo JSON' });
     }
 
     let produtosJsonData;
@@ -72,33 +72,35 @@ app.delete('/deletar-produto/:id', (req, res) => {
     try {
       produtosJsonData = JSON.parse(data);
     } catch (error) {
-      return res.status(500).json({ message: 'Erro ao interpretar json' });
+      res.status(500).json({ message: 'Erro ao interpretar JSON' });
     }
 
-    const { categoria, id } = req.body;
+    const { id } = req.params;
 
-    if (!produtosJsonData[categoria]) {
-      return res.status(400).json({ message: 'Categoria inválida' });
+    let produtoEncontrado = false;
+
+    for (const categoria in produtosJsonData) {
+      const index = produtosJsonData[categoria].findIndex((produto: Produto) => produto.id === id);
+      if (index !== -1) {
+        produtosJsonData[categoria].splice(index, 1);
+        produtoEncontrado = true;
+        break;
+      }
     }
 
-    const index = produtosJsonData[categoria].findIndex((produto: Produto) => produto.id === id);
-
-    if (index === -1) {
-      return res.status(404).json({ message: 'Produto não encontrado' });
+    if (!produtoEncontrado) {
+      res.status(404).json({ message: 'Produto não encontrado' });
     }
-
-    produtosJsonData[categoria].splice(index, 1);
 
     fs.writeFile(produtosJson, JSON.stringify(produtosJsonData, null, 2), 'utf8', (writeErr) => {
       if (writeErr) {
-        return res.status(500).json({ message: 'Erro ao salvar o arquivo json' });
+        res.status(500).json({ message: 'Erro ao salvar o arquivo JSON' });
       }
-      return res.status(200).json({ message: 'Produto deletado com sucesso.' });
+      res.status(200).json({ message: 'Produto deletado com sucesso.' });
     });
   });
 });
 
-app.delete
 
 app.listen(porta, async () => {
   console.log(`Server rodando em http://localhost:${porta}`);

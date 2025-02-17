@@ -7,10 +7,12 @@
   />
 
   <a href="" title="Adicionar novo produto" [routerLink]="'/formulario'">
-  <mat-icon class="adicionar-novo-produto"
+    <mat-icon
+      class="adicionar-novo-produto"
       aria-hidden="false"
       aria-label="Example home icon"
-      fontIcon="add_box">
+      fontIcon="add_box"
+    >
     </mat-icon>
   </a>
 </div>
@@ -51,4 +53,36 @@
       </tr>
     </tbody>
   </table>
+</div>
+
+<div class="paginacao">
+  <button
+    class="pagina-anterior"
+    (click)="paginaAnterior()"
+    [disabled]="paginaAtual === 1"
+  >
+    <mat-icon
+      class="icone-pagina-anterior"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="keyboard_arrow_left"
+    >
+    </mat-icon>
+  </button>
+
+  <span>Página {{ paginaAtual }} de {{ totalPaginas }}</span>
+  
+  <button
+    class="proxima-pagina"
+    (click)="proximaPagina()"
+    [disabled]="paginaAtual === totalPaginas"
+  >
+    <mat-icon
+      class="icone-proxima-pagina"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="keyboard_arrow_right"
+    >
+    </mat-icon>
+  </button>
 </div>

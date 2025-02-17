@@ -17,6 +17,9 @@ export class TabelaComponent {
   produtos: Produto[] = [];
   produtosFiltrados: Produto[] = [];
   filtro: string = '';
+  paginaAtual: number = 1;
+  itensPorPagina: number = 10;
+  totalPaginas: number = 0;
 
    constructor(private http: HttpClient) {}
 
@@ -28,6 +31,8 @@ mostrarProdutos(): void {
   this.http.get<any>('assets/produtos.json').subscribe((data) => {
     this.produtos = [...data.produtos, ...data.destaques, ...data.hortifruti];
     this.produtosFiltrados = [...this.produtos];
+    this.totalPaginas = Math.ceil(this.produtos.length / this.itensPorPagina);
+    this.atualizarPagina();
   });
 }
 
@@ -54,5 +59,26 @@ deletar(id: string) {
     console.log('Exclusão cancelada');
   }
 }
+
+atualizarPagina(): void {
+  const inicio = (this.paginaAtual - 1) * this.itensPorPagina;
+  const fim = inicio + this.itensPorPagina;
+  this.produtosFiltrados = this.produtos.slice(inicio, fim);
+}
+
+proximaPagina(): void {
+  if (this.paginaAtual < this.totalPaginas) {
+    this.paginaAtual++;
+    this.atualizarPagina();
+  }
+}
+
+paginaAnterior(): void {
+  if (this.paginaAtual > 1) {
+    this.paginaAtual--;
+    this.atualizarPagina();
+  }
+}
+
 
 }

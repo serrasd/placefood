@@ -34,7 +34,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -84,7 +84,8 @@
   width: auto;
 }
 
-.icone-editar, .icone-deletar {
+.icone-editar,
+.icone-deletar {
   display: flex;
   color: var(--verde);
   justify-content: center;
@@ -100,4 +101,56 @@
 .icone-deletar:hover {
   transform: scale(1.2);
   color: red;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pagina-anterior,
+.proxima-pagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: var(--verde-claro);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid var(--cinza-claro);
+  padding: 14px 16px;
+}
+
+.pagina-anterior:hover,
+.proxima-pagina:hover {
+  background-color: var(--verde);
+}
+
+.icone-pagina-anterior,
+.icone-proxima-pagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.icone-pagina-anterior:hover,
+.icone-proxima-pagina:hover {
+  transform: scale(1.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  font-weight: 500;
+  margin-left: 10px;
+  margin-right: 10px;
 }

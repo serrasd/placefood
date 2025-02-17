@@ -103,5 +103,5 @@ app.delete('/deletar-produto/:id', (req, res) => {
 
 
 app.listen(porta, async () => {
-  console.log(`Server rodando em http://localhost:${porta}`);
+  console.log(`Server rodando em http://192.168.208.62:${porta}`);
 });

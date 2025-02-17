@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Produto } from "../../interface/produto.model"
+import { Produto } from '../../interface/produto.model';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,9 +9,15 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tabela',
-  imports: [CommonModule, MatIconModule, MatButtonModule, RouterModule, FormsModule],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatButtonModule,
+    RouterModule,
+    FormsModule,
+  ],
   templateUrl: './tabela.component.html',
-  styleUrl: './tabela.component.css'
+  styleUrl: './tabela.component.css',
 })
 export class TabelaComponent {
   produtos: Produto[] = [];
@@ -32,7 +38,9 @@ export class TabelaComponent {
     this.http.get<any>('assets/produtos.json').subscribe((data) => {
       this.produtos = [...data.produtos, ...data.destaques, ...data.hortifruti];
       this.produtosFiltrados = [...this.produtos];
-      this.totalPaginas = Math.ceil(this.produtosFiltrados.length / this.itensPorPagina);
+      this.totalPaginas = Math.ceil(
+        this.produtosFiltrados.length / this.itensPorPagina
+      );
       this.atualizarPagina();
     });
   }
@@ -43,23 +51,29 @@ export class TabelaComponent {
       produto.nome.toLowerCase().includes(filtroLowerCase)
     );
 
-    this.totalPaginas = Math.ceil(this.produtosFiltrados.length / this.itensPorPagina);
+    this.totalPaginas = Math.ceil(
+      this.produtosFiltrados.length / this.itensPorPagina
+    );
     this.paginaAtual = 1;
     this.atualizarPagina();
   }
 
   deletar(id: string) {
-    const confirmacao = window.confirm('Você tem certeza que deseja excluir este produto?');
+    const confirmacao = window.confirm(
+      'Você tem certeza que deseja excluir este produto?'
+    );
     if (confirmacao) {
       console.log('Botão clicado');
-      this.http.delete(`http://localhost:3000/deletar-produto/${id}`).subscribe(
-        (response) => {
-          console.log('Produto deletado com sucesso', response);
-        },
-        (error) => {
-          console.log('Erro ao deletar produto', error);
-        }
-      );
+      this.http
+        .delete(`http://192.168.208.62:3000/deletar-produto/${id}`)
+        .subscribe(
+          (response) => {
+            console.log('Produto deletado com sucesso', response);
+          },
+          (error) => {
+            console.log('Erro ao deletar produto', error);
+          }
+        );
     } else {
       console.log('Exclusão cancelada');
     }

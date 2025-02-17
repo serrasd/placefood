@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-crud-table',
   standalone: true,
-  imports: [CommonModule, FormsModule, ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './crud-tabela.component.html',
   styleUrls: ['./crud-tabela.component.css'],
 })
@@ -19,7 +19,7 @@ export class CrudTableComponent {
     id: '',
   };
 
-  urlPreview: string | null = null
+  urlPreview: string | null = null;
 
   constructor(private http: HttpClient) {}
 
@@ -29,14 +29,19 @@ export class CrudTableComponent {
 
     console.log('Produto enviado:', this.novoProduto);
 
-    this.http.post('http://localhost:3000/adicionar-produto', { categoria, novoProduto: this.novoProduto }).subscribe(
-      (response) => {
-        console.log('Produto criado com sucesso', response);
-      },
-      (error) => {
-        console.log('Erro ao criar produto', error);
-      }
-    );
+    this.http
+      .post('http://192.168.208.62:3000/adicionar-produto', {
+        categoria,
+        novoProduto: this.novoProduto,
+      })
+      .subscribe(
+        (response) => {
+          console.log('Produto criado com sucesso', response);
+        },
+        (error) => {
+          console.log('Erro ao criar produto', error);
+        }
+      );
   }
 
   cancelar(): void {
@@ -45,11 +50,10 @@ export class CrudTableComponent {
       nome: '',
       preco: null,
       categoria: '',
-      id: ''
+      id: '',
     };
     this.urlPreview = null;
   }
-
 
   gerarId(): string {
     return [...Array(24)].map(() => Math.random().toString(36)[2]).join('');
@@ -67,8 +71,7 @@ export class CrudTableComponent {
     reader.onload = () => {
       this.novoProduto.imagem = reader.result as string;
       this.urlPreview = reader.result as string;
-    }
+    };
     reader.readAsDataURL(arquivo);
   }
-
 }

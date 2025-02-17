@@ -95,7 +95,12 @@
   .titulo-destaques,
   .titulo-hortifruti {
     font-weight: 600;
-  }
+}
+
+.margem {
+  overflow-x: hidden;
+  margin: 0px 10px 0px 10px;
+}
 
 
 .btn-esquerda,

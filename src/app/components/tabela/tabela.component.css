@@ -2,7 +2,7 @@
   margin-top: 100px;
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -107,6 +107,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -154,3 +155,31 @@ span {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+/* MEDIAQUERIES */
+
+@media (max-width: 480px) {
+  .campo-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+  }
+  .table-container {
+    width: 100%;
+  }
+
+  thead {
+    font-size: 0.8rem;
+  }
+
+  td {
+    font-size: 0.7rem;
+  }
+
+  .imagens-produtos {
+    width: 70px;
+  }
+}
+

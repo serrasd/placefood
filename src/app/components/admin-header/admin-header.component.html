@@ -10,7 +10,11 @@
     </a>
   </header>
 
-  <nav>
+  <button class="menu-btn" (click)="toggleMenu()">
+    <mat-icon fontIcon="menu"></mat-icon>
+  </button>
+
+  <nav [class.show]="menuAberto">
     <ul>
       <li><a class="dashboard" href="#">Dashboard
         <mat-icon

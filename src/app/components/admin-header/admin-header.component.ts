@@ -8,5 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './admin-header.component.css'
 })
 export class AdminHeaderComponent {
+  menuAberto: boolean = false;
 
+  toggleMenu(): void {
+    this.menuAberto = !this.menuAberto;
+  }
 }

@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages//admin/admin.component';
 import { AdminFormularioComponent } from './pages/admin-formulario/admin-formulario.component';
+import { AdminEdicaoComponent } from './pages/admin-edicao/admin-edicao.component';
 
 export const routes: Routes = [
   {
@@ -15,7 +16,8 @@ export const routes: Routes = [
   },
   { path: 'admin',
     component: AdminComponent },
-
   { path: 'formulario',
-    component:  AdminFormularioComponent}
+    component:  AdminFormularioComponent},
+  { path: 'editar',
+    component:  AdminEdicaoComponent}
 ];

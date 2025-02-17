@@ -27,8 +27,6 @@ export class CrudTableComponent {
     this.novoProduto.id = this.gerarId();
     const categoria = this.novoProduto.categoria;
 
-    console.log('Produto enviado:', this.novoProduto);
-
     this.http
       .post('http://192.168.208.62:3000/adicionar-produto', {
         categoria,
@@ -36,10 +34,10 @@ export class CrudTableComponent {
       })
       .subscribe(
         (response) => {
-          console.log('Produto criado com sucesso', response);
+          alert('Produto cadastrado com sucesso');
         },
         (error) => {
-          console.log('Erro ao criar produto', error);
+          alert('Erro ao cadastrar produto');
         }
       );
   }

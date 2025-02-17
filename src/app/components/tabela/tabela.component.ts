@@ -68,14 +68,14 @@ export class TabelaComponent {
         .delete(`http://192.168.208.62:3000/deletar-produto/${id}`)
         .subscribe(
           (response) => {
-            console.log('Produto deletado com sucesso', response);
+            alert('Produto excluído com sucesso');
           },
           (error) => {
-            console.log('Erro ao deletar produto', error);
+            alert('Erro ao excluir produto');
           }
         );
     } else {
-      console.log('Exclusão cancelada');
+      alert('Exclusão cancelada');
     }
   }
 

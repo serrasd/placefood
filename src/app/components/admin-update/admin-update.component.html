@@ -1,0 +1,21 @@
+<div class="crud">
+  <h1>Editar produto</h1>
+  <form class="form-container">
+    <img class="imagem-preview">
+    <input name="imagem" type="file" accept="image/*" required/>
+    <input name="nome" placeholder="Nome do produto" />
+    <input name="preco" type="number" placeholder="Preço do produto" />
+
+
+    <select id="categoria" name="categoria">
+      <option value="" disabled selected>Selecione uma categoria</option>
+      <option value="produtos">Produtos</option>
+      <option value="destaques">Destaques</option>
+      <option value="hortifruti">Hortifruti</option>
+    </select>
+
+    <div class="salvar-cancelar">
+      <button type="submit" class="salvar">Salvar</button>
+      <button type="submit" class="cancelar">Cancelar</button>
+    </div>
+  </form>

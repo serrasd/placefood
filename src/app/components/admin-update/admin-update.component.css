@@ -64,53 +64,9 @@
   background-color: var(--verde);
 }
 
-.search-container input {
-  border: 1px solid #BFC1C5;
-  outline: none;
-  padding: 10px;
-  border-radius: 10px;
-  width: 300px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.table-container {
-  width: 60%;
-  overflow-x: auto;
-}
-
-.editar-tabela, .excluir-tabela {
-  width: 100px;
-  border: none;
-  background-color: var(--verde-claro);
-  padding: 10px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-th {
-  background-color: #f4f4f4;
-}
-
 button {
   margin-right: 5px;
   cursor: pointer;
-}
-
-img {
-  max-width: 50px;
-  height: auto;
 }
 
 /* MEDIAQUERIES */

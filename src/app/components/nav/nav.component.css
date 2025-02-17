@@ -1,6 +1,6 @@
 nav {
   background-color: var(--verde-claro);
-  height: 40px;
+  height: 45px;
   padding-top: 10px;
   position: fixed;
   top: 60px;
@@ -22,6 +22,7 @@ ul {
   flex-wrap: wrap;
   list-style-type: none;
   justify-content: space-around;
+  align-items: center;
   padding: 0;
 }
 

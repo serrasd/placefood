@@ -28,7 +28,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let produto of produtosFiltrados">
+      <tr *ngFor="let produto of produtosExibidos">
         <td><img class="imagens-produtos" [src]="produto.imagem" alt="" /></td>
         <td>{{ produto.nome }}</td>
         <td>{{ produto.preco }}</td>
@@ -71,7 +71,7 @@
   </button>
 
   <span>Página {{ paginaAtual }} de {{ totalPaginas }}</span>
-  
+
   <button
     class="proxima-pagina"
     (click)="proximaPagina()"

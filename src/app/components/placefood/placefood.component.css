@@ -108,7 +108,14 @@ input:focus {
   }
 
   .botoes-conta {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cria-conta, .logar {
+    font-size: 0.7rem;
+    text-align: center;
   }
 
   section {
@@ -125,7 +132,8 @@ input:focus {
   }
 
   input {
-    width: 60vw;
+    margin-left: 20px;
+    width: 40vw;
   }
 }
 

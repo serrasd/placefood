@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages//admin/admin.component';
-import { CrudTableComponent } from './components/crud-tabela/crud-tabela.component';
+import { AdminFormularioComponent } from './pages/admin-formulario/admin-formulario.component';
 
 export const routes: Routes = [
   {
@@ -17,5 +17,5 @@ export const routes: Routes = [
     component: AdminComponent },
 
   { path: 'formulario',
-    component:  CrudTableComponent}
+    component:  AdminFormularioComponent}
 ];

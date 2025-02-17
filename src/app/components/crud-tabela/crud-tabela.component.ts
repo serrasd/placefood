@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { AdminHeaderComponent } from "../admin-header/admin-header.component";
 
 @Component({
   selector: 'app-crud-table',
   standalone: true,
-  imports: [CommonModule, FormsModule, AdminHeaderComponent],
+  imports: [CommonModule, FormsModule, ],
   templateUrl: './crud-tabela.component.html',
   styleUrls: ['./crud-tabela.component.css'],
 })

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../../interface/produto.model';
 import { FormsModule } from '@angular/forms';
 import { map, Observable } from 'rxjs';
@@ -17,7 +16,7 @@ export class AdminUpdateComponent {
   produto: Produto | null = null;
   urlPreview: string | null = null;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute,  private router: Router) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -47,6 +46,7 @@ export class AdminUpdateComponent {
       .subscribe(
         () => {
           alert('Produto atualizado com sucesso');
+          this.router.navigate(['/admin']);
         },
         (error) => {
           alert(`Produto não atualizado, erro: ${error.message}`);

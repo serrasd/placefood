@@ -52,12 +52,13 @@ input {
   padding: 0 1em;
   width: 67vw;
   border-radius: 5px 0px 0px 5px;
-  border: 2px solid var(--verde-logo);
+  border: 2px solid var(--verde-claro);
   border-right: none;
+  outline: none;
 }
 
 input:focus {
-  border: 1px solid var(--verde-claro);
+  border: 2px solid var(--verde-logo);
 }
 
 .buscar {

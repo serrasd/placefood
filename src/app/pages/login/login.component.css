@@ -80,11 +80,21 @@ button {
   .container {
     display: flex;
     flex-wrap: wrap;
+    height: max-content;
+    background-color: #F2F4F7;
+  }
+  
+  .conteudo {
+    margin-top: -50px;
+  }
+
+  .conteudo p{
+    margin-top: -50px;
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   p {
@@ -97,7 +107,7 @@ button {
 @media (min-width: 480px) and (max-width: 590px) {
 
   .container {
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     height: 100vh;

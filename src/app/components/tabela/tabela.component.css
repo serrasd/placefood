@@ -1,5 +1,5 @@
 .campo-pesquisa {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -160,6 +160,7 @@ span {
 
 @media (max-width: 480px) {
   .campo-pesquisa {
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;

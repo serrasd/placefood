@@ -18,6 +18,6 @@ export const routes: Routes = [
     component: AdminComponent },
   { path: 'formulario',
     component:  AdminFormularioComponent},
-  { path: 'editar',
+  { path: 'editar/:id',
     component:  AdminEdicaoComponent}
 ];

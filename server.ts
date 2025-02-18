@@ -101,6 +101,41 @@ app.delete('/deletar-produto/:id', (req, res) => {
   });
 });
 
+app.put('/atualizar-produto/:id', (req, res) => {
+  console.log('Recebendo requisição para atualizar o produto com ID:', req.params.id);
+
+  fs.readFile(produtosJson, 'utf-8', (err, data) => {
+      if (err) {
+          return res.status(500).json({ message: 'Erro ao ler o arquivo JSON' });
+      }
+
+      let produtosJsonData: { [key: string]: Produto[] } = JSON.parse(data.toString());
+      const id = req.params.id;
+      let produtoEncontrado = false;
+
+      for (const categoria in produtosJsonData) {
+          const index = produtosJsonData[categoria].findIndex((produto: Produto) => produto.id === id);
+          if (index !== -1) {
+              console.log('Produto encontrado na categoria:', categoria);
+              produtosJsonData[categoria][index] = { ...produtosJsonData[categoria][index], ...req.body };
+              produtoEncontrado = true;
+              break;
+          }
+      }
+
+      if (!produtoEncontrado) {
+          console.log('Produto não encontrado com ID:', id);
+          return res.status(404).json({ message: 'Produto não encontrado' });
+      }
+
+      fs.writeFile(produtosJson, JSON.stringify(produtosJsonData, null, 2), 'utf-8', (err) => {
+          if (err) {
+              return res.status(500).json({ message: 'Erro ao salvar o arquivo JSON' });
+          }
+          return res.status(200).json({ message: 'Produto atualizado com sucesso' });
+      });
+  });
+});
 
 app.listen(porta, async () => {
   console.log(`Server rodando em http://192.168.208.62:${porta}`);

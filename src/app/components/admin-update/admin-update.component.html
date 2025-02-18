@@ -3,11 +3,11 @@
   <form class="form-container">
     <img class="imagem-preview">
     <input name="imagem" type="file" accept="image/*" required/>
-    <input name="nome" placeholder="Nome do produto" />
-    <input name="preco" type="number" placeholder="Preço do produto" />
+    <input name="nome" placeholder="Nome do produto" [(ngModel)]="novoProduto.nome" required />
+    <input name="preco" type="number" placeholder="Preço do produto" [(ngModel)]="novoProduto.preco" required />
 
 
-    <select id="categoria" name="categoria">
+    <select id="categoria" name="categoria" [(ngModel)]="novoProduto.categoria" required>
       <option value="" disabled selected>Selecione uma categoria</option>
       <option value="produtos">Produtos</option>
       <option value="destaques">Destaques</option>
@@ -15,7 +15,7 @@
     </select>
 
     <div class="salvar-cancelar">
-      <button type="submit" class="salvar">Salvar</button>
-      <button type="submit" class="cancelar">Cancelar</button>
+      <button type="submit" class="salvar" (click)="atualizar()">Salvar</button>
+      <button type="submit" class="cancelar" (click)="cancelar()">Cancelar</button>
     </div>
   </form>

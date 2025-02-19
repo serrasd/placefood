@@ -38,21 +38,21 @@ export class AdminUpdateComponent {
       alert('Produto não encontrado.');
       return;
     }
-    this.http
-      .put(
-        `http://192.168.208.62:3000/atualizar-produto/${this.novoProduto.id}`,
-        this.novoProduto
-      )
-      .subscribe(
-        () => {
-          alert('Produto atualizado com sucesso');
-          this.router.navigate(['/admin']);
-        },
-        (error) => {
-          alert(`Produto não atualizado, erro: ${error.message}`);
-        }
-      );
+
+    const host = window.location.hostname;
+    const url = `http://${host}:3000/atualizar-produto/${this.novoProduto.id}`;
+
+    this.http.put(url, this.novoProduto).subscribe(
+      () => {
+        alert('Produto atualizado com sucesso');
+        this.router.navigate(['/admin']);
+      },
+      (error) => {
+        alert(`Produto não atualizado, erro: ${error.message}`);
+      }
+    );
   }
+
 
   cancelar(): void {
     this.novoProduto = {
@@ -74,7 +74,10 @@ export class AdminUpdateComponent {
   }
 
   obterProdutos(): Observable<Produto[]> {
-    return this.http.get<any>('http://192.168.208.62:3000/produtos').pipe(
+    const host = window.location.hostname;
+    const url = `http://${host}:3000/produtos`;
+
+    return this.http.get<any>(url).pipe(
       map(response => {
         if (Array.isArray(response)) {
           return response;

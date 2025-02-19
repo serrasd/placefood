@@ -137,6 +137,6 @@ app.put('/atualizar-produto/:id', (req, res) => {
   });
 });
 
-app.listen(porta, async () => {
-  console.log(`Server rodando em http://192.168.208.62:${porta}`);
+app.listen(porta, '0.0.0.0', async () => {
+  console.log(`Server rodando na porta ${porta}`);
 });

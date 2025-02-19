@@ -64,16 +64,18 @@ export class TabelaComponent {
     );
     if (confirmacao) {
       console.log('Botão clicado');
-      this.http
-        .delete(`http://192.168.208.62:3000/deletar-produto/${id}`)
-        .subscribe(
-          (response) => {
-            alert('Produto excluído com sucesso');
-          },
-          (error) => {
-            alert('Erro ao excluir produto');
-          }
-        );
+
+      const host = window.location.hostname;
+      const url = `http://${host}:3000/deletar-produto/${id}`;
+
+      this.http.delete(url).subscribe(
+        (response) => {
+          alert('Produto excluído com sucesso');
+        },
+        (error) => {
+          alert('Erro ao excluir produto');
+        }
+      );
     } else {
       alert('Exclusão cancelada');
     }

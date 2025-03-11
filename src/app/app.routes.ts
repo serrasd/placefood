@@ -19,5 +19,7 @@ export const routes: Routes = [
   { path: 'formulario',
     component:  AdminFormularioComponent},
   { path: 'editar/:id',
-    component:  AdminEdicaoComponent}
+    component:  AdminEdicaoComponent,
+    data: { renderMode: 'no-prerender' }
+  }
 ];

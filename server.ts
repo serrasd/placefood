@@ -6,7 +6,7 @@ import { Produto } from './src/app/interface/produto.model';
 
 const app = express();
 const porta = 3000;
-const produtosJson = path.join(__dirname, '/src/assets/produtos.json');
+const produtosJson = path.join(__dirname, '/usr/share/nginx/html/assets/produtos.json');
 
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));

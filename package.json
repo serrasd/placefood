@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "npx concurrently \"npx tsx server.ts\" \"ng serve\"",
+    "server": "npx tsx server.ts",
     "serve:ssr:placefood-developer": "node dist/placefood-developer/server/server.mjs"
   },
   "private": true,

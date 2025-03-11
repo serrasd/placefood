@@ -40,9 +40,8 @@ O Placefood é um e-commerce de alimentos onde você pode selecionar os melhores
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- Angular
 - HTML e CSS
 - TypeScript
-- Angular
-- MySQL
-- Mongo
-- Git e Github
+- Podman
+- Git, Github e GitLab

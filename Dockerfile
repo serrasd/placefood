@@ -1,14 +1,31 @@
-FROM node:latest
+FROM node:18-alpine AS builder
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
 RUN npm install -g @angular/cli
 
 COPY . .
 
-EXPOSE 4200 3000
+RUN ng build --project=placefood-developer
 
-CMD ["sh", "-c", "npm run server & ng serve --host 0.0.0.0 --disable-host-check"]
+FROM docker.io/library/nginx:alpine
+
+RUN apk add --no-cache nodejs npm
+
+COPY --from=builder /app/dist/placefood-developer/browser /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+COPY package*.json ./
+
+COPY server.ts .
+
+WORKDIR /app
+
+RUN npm install tsx express cors fs path
+
+EXPOSE 8080 3000
+
+CMD ["sh", "-c", "npm run server & nginx -g 'daemon off;'"]

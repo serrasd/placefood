@@ -38,6 +38,7 @@ Na tela de login, basta digitar "admin" no campo de usuário e senha para conseg
 O Placefood é um e-commerce de alimentos onde você pode selecionar os melhores produtos e recebê-los em sua casa
 </p>
 
+> ⚠️ Este projeto foi desenvolvido apenas para fins de estudo e aprendizado. Não se trata de uma aplicação em produção.
 
 <br>
 
